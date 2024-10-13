@@ -1,16 +1,27 @@
-function tarefa({ titulo, usuario, completa }) {
-    return (
-      <p
+function tarefa({ titulo, usuario, completa, onClick }) {
+  return (
+    <div
+      onClick={onClick}
+      style={{
+        cursor: "pointer",
+        padding: "5px",
+        border: "ipx solid black",
+        margin: "5px",
+      }}
+    >
+        <p
         style={{
           backgroundColor: "white",
-          textDecoration: completa ? "line-through" : "none", 
-          padding: "10px",
-          margin: "5px 0",
+          textDecoration: completa ? "line-through" : "none",
+          padding: "05px",
+          margin: "05px 0",
         }}
+        
       >
         {titulo} - {usuario}
       </p>
-    );
-  }
-  
-  export default tarefa;
+      </div>
+  );
+}
+
+export default tarefa;
